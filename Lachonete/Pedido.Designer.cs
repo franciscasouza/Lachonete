@@ -35,10 +35,12 @@ namespace Lachonete
             this.label2 = new System.Windows.Forms.Label();
             this.txtPId = new System.Windows.Forms.TextBox();
             this.dataGridViewPedido = new System.Windows.Forms.DataGridView();
-            this.btnPedido = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPedido = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPedido)).BeginInit();
             this.SuspendLayout();
@@ -103,16 +105,29 @@ namespace Lachonete
             this.dataGridViewPedido.Size = new System.Drawing.Size(681, 371);
             this.dataGridViewPedido.TabIndex = 5;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Descrição Produto";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 500;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Valor Unitário";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
             // btnPedido
             // 
             this.btnPedido.BackColor = System.Drawing.Color.Lime;
             this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedido.Location = new System.Drawing.Point(367, 640);
+            this.btnPedido.Location = new System.Drawing.Point(551, 673);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Size = new System.Drawing.Size(137, 30);
             this.btnPedido.TabIndex = 6;
             this.btnPedido.Text = "Fechar Pedido";
             this.btnPedido.UseVisualStyleBackColor = false;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // button1
             // 
@@ -124,21 +139,35 @@ namespace Lachonete
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column1
+            // txtTotal
             // 
-            this.Column1.HeaderText = "Descrição Produto";
-            this.Column1.Name = "Column1";
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.ForeColor = System.Drawing.Color.Maroon;
+            this.txtTotal.Location = new System.Drawing.Point(176, 631);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 19);
+            this.txtTotal.TabIndex = 8;
             // 
-            // Column2
+            // label3
             // 
-            this.Column2.HeaderText = "Valor Unitário";
-            this.Column2.Name = "Column2";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
+            this.label3.Location = new System.Drawing.Point(44, 630);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Total a Pagar: ";
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 682);
+            this.ClientSize = new System.Drawing.Size(1291, 727);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.dataGridViewPedido);
@@ -168,5 +197,7 @@ namespace Lachonete
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label3;
     }
 }

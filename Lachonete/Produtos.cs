@@ -9,7 +9,8 @@ namespace Lachonete
     public class Produtos
     {
         public int IdProduto { get; set; }
-        public string descricao { get; set; }
+        public string Descricao { get; set; }
         public double ValorUnitatio { get; set; }
+
     }
 }
