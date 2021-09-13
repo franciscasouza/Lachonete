@@ -12,12 +12,14 @@ namespace Lachonete
 {
     public partial class CadCliente : Form
     {
-        Cliente c ;
+        Cliente c = new Cliente();
         public CadCliente()
         {
             InitializeComponent();
+            c.ListarClientes();
         }
 
+    
        
 
         private void button1_Click(object sender, EventArgs e)
