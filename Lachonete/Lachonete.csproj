@@ -199,6 +199,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Bd\BdCliente.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,8 +217,6 @@
   <ItemGroup>
     <None Include="Resources\cardapio.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Banco\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
